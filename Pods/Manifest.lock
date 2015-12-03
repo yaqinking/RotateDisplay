@@ -1,0 +1,10 @@
+PODS:
+  - MASShortcut (2.3.2)
+
+DEPENDENCIES:
+  - MASShortcut
+
+SPEC CHECKSUMS:
+  MASShortcut: a816834091659aca3ad6a309f44ae16d25a7fef6
+
+COCOAPODS: 0.39.0

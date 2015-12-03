@@ -14,6 +14,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="rotateRightShortcutView" destination="ObY-uJ-DBd" id="frM-h4-pYU"/>
+                <outlet property="rotateStandardShortcutView" destination="lJ8-E2-pGB" id="tnx-YN-pQy"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -667,16 +669,57 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="RotateDisplay" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="RotateDisplay" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="357" height="140"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="357" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ObY-uJ-DBd" customClass="MASShortcutView">
+                        <rect key="frame" x="144" y="99" width="193" height="24"/>
+                        <animations/>
+                    </customView>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJ8-E2-pGB" customClass="MASShortcutView">
+                        <rect key="frame" x="144" y="61" width="193" height="24"/>
+                        <animations/>
+                    </customView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vq7-ft-b6w">
+                        <rect key="frame" x="8" y="103" width="69" height="17"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rotate 90°" id="wqt-cx-p83">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3re-Jl-12o">
+                        <rect key="frame" x="8" y="68" width="101" height="17"/>
+                        <animations/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rotate standard" id="8Bp-5t-LpY">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-PA-dEl">
+                        <rect key="frame" x="142" y="25" width="197" height="18"/>
+                        <animations/>
+                        <buttonCell key="cell" type="check" title="Enable system wide shortcut" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="BxG-hx-VAK">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <binding destination="cDl-Qg-S60" name="value" keyPath="values.customShortcutEnabled" id="QN3-Tb-2py"/>
+                        </connections>
+                    </button>
+                </subviews>
                 <animations/>
             </view>
+            <point key="canvasLocation" x="351.5" y="341"/>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="cDl-Qg-S60"/>
     </objects>
 </document>

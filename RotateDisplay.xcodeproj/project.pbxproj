@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11D3B4345D38D2D56778033 /* libPods-RotateDisplay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89ACFD36C383E813320C6E8B /* libPods-RotateDisplay.a */; };
 		F442205B1C0F341500776465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F442205A1C0F341500776465 /* AppDelegate.m */; };
 		F442205E1C0F341500776465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F442205D1C0F341500776465 /* main.m */; };
 		F44220601C0F341500776465 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F442205F1C0F341500776465 /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18D1F57DA22E68E18FEE7349 /* Pods-RotateDisplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RotateDisplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-RotateDisplay/Pods-RotateDisplay.release.xcconfig"; sourceTree = "<group>"; };
+		2100F67C80543B11EEE0C121 /* Pods-RotateDisplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RotateDisplay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RotateDisplay/Pods-RotateDisplay.debug.xcconfig"; sourceTree = "<group>"; };
+		89ACFD36C383E813320C6E8B /* libPods-RotateDisplay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RotateDisplay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44220561C0F341500776465 /* RotateDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotateDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44220591C0F341500776465 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F442205A1C0F341500776465 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -28,17 +32,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11D3B4345D38D2D56778033 /* libPods-RotateDisplay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD28EEB449918118E800FFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89ACFD36C383E813320C6E8B /* libPods-RotateDisplay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB804696D32A0EDF57681E59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2100F67C80543B11EEE0C121 /* Pods-RotateDisplay.debug.xcconfig */,
+				18D1F57DA22E68E18FEE7349 /* Pods-RotateDisplay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F442204D1C0F341500776465 = {
 			isa = PBXGroup;
 			children = (
 				F44220581C0F341500776465 /* RotateDisplay */,
 				F44220571C0F341500776465 /* Products */,
+				DB804696D32A0EDF57681E59 /* Pods */,
+				0BD28EEB449918118E800FFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F44220671C0F341600776465 /* Build configuration list for PBXNativeTarget "RotateDisplay" */;
 			buildPhases = (
+				CBE0A430FF7C2749A0C45EF4 /* Check Pods Manifest.lock */,
 				F44220521C0F341500776465 /* Sources */,
 				F44220531C0F341500776465 /* Frameworks */,
 				F44220541C0F341500776465 /* Resources */,
+				A4398B56B303A6C8441336C2 /* Embed Pods Frameworks */,
+				247CDF15ADE30A66C856B30E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +162,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		247CDF15ADE30A66C856B30E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RotateDisplay/Pods-RotateDisplay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4398B56B303A6C8441336C2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RotateDisplay/Pods-RotateDisplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBE0A430FF7C2749A0C45EF4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F44220521C0F341500776465 /* Sources */ = {
@@ -241,6 +316,7 @@
 		};
 		F44220681C0F341600776465 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2100F67C80543B11EEE0C121 /* Pods-RotateDisplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
@@ -254,6 +330,7 @@
 		};
 		F44220691C0F341600776465 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D1F57DA22E68E18FEE7349 /* Pods-RotateDisplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Developer ID Application";
@@ -284,6 +361,7 @@
 				F44220691C0F341600776465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
